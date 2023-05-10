@@ -1,0 +1,43 @@
+#index-page
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  padding: 0 22px
+
+  .cover
+    position: relative
+    width: 100%
+    height: 300px
+    margin-bottom: 18px
+
+    .cover-image
+      background: var(--bg)
+      display: flex
+      align-items: center
+      justify-content: center
+      border-bottom-left-radius: 30px
+      border-bottom-right-radius: 30px
+      height: 100%
+
+  .profile-info
+    margin: 32px 0
+    box-sizing: border-box
+    display: grid
+    column-gap: 8px
+    grid-template-columns: 160px auto
+    grid-template-rows: repeat(2, 1fr)
+
+    .profile-image
+      grid-row: 1 / 3
+      width: 140px
+      height: 140px
+      border-radius: 50%
+      margin-bottom: 12px
+      background: var(--bg)
+
+@media screen and (max-width: 540px)
+  #index-page
+    .profile-info
+      grid-template-columns: 1fr
+      margin-bottom: 12px
+      grid-row: 12px
